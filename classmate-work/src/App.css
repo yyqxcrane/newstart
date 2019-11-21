@@ -1,0 +1,136 @@
+/* .App {
+  text-align: center;
+} */
+.nav{
+  text-align: center;
+  margin: 10px 0;
+}
+span{
+  margin: 0 20px;
+  cursor: pointer;
+}
+.home{
+  color: #1E90FF;
+}
+.body{
+  height: 500px;
+  background: #DBDBDB;
+  position: relative;
+}
+.left-top{
+  position: absolute;
+  left: 3%;
+  top: 3%;
+  width: 55%;
+  height: 220px;
+  background: white;
+}
+.left-top h2{
+  height: 40px;
+  line-height: 40px;
+  color: #3B3B3B;
+  border-bottom: 1px solid #EDEDED;
+  margin: 0 3%;
+}
+.left-top div{
+  height: 40px;
+  line-height: 40px;
+  color: #3B3B3B;
+  border-bottom: 1px solid #EDEDED;
+  border-left: 1px solid #EDEDED;
+  border-right: 1px solid #EDEDED;
+  margin: 0 3%;
+  padding-left: 10px;
+  cursor: pointer;
+  white-space:nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.right-top{
+  position: absolute;
+  right: 3%;
+  top: 3%;
+  width: 35%;
+  height: 220px;
+  background: white;
+}
+.right-top h2{
+  height: 40px;
+  line-height: 40px;
+  color: #3B3B3B;
+  border-bottom: 1px solid #EDEDED;
+  margin: 0 3%;
+}
+.right-top div{
+  color: #1E90FF;
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #EDEDED;
+  border-left: 1px solid #EDEDED;
+  border-right: 1px solid #EDEDED;
+  margin: 0 3%;
+  padding-left: 10px;
+  cursor: pointer;
+  white-space:nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.left-bottom{
+  position: absolute;
+  left: 3%;
+  bottom: 3%;
+  width: 55%;
+  height: 220px;
+  background: white;
+}
+.left-bottom h2{
+  height: 40px;
+  line-height: 40px;
+  color: #3B3B3B;
+  border-bottom: 1px solid #EDEDED;
+  margin: 0 3%;
+}
+.left-bottom div{
+  height: 40px;
+  line-height: 40px;
+  color: #3B3B3B;
+  border-bottom: 1px solid #EDEDED;
+  border-left: 1px solid #EDEDED;
+  border-right: 1px solid #EDEDED;
+  margin: 0 3%;
+  padding-left: 10px;
+  cursor: pointer;
+  white-space:nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.right-bottom{
+  position: absolute;
+  right: 3%;
+  bottom: 10%;
+  width: 35%;
+  height: 185px;
+  background: white;
+}
+.right-bottom img{
+  width: 40px;
+  height: 40px;
+}
+.right-bottom h2{
+  height: 40px;
+  line-height: 40px;
+  color: #3B3B3B;
+  margin: 0 3%;
+}
+.right-bottom div{
+  height: 40px;
+  line-height: 40px;
+  color: #3B3B3B;
+  margin: 0 3%;
+  padding-left: 10px;
+  cursor: pointer;
+  display: flex;
+  white-space:nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

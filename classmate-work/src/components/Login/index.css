@@ -1,0 +1,38 @@
+.from {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 9999;
+    width: 500px;
+    height: 300px;
+    background: #DBDBDB;
+}
+.head {
+    width: 500px;
+    height: 70px;
+    position: relative;
+}
+.head-left {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-size: 20px;
+}
+.head-right {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 20px;
+}
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input_box {
+    margin: 20px;
+    text-align: center;
+}
