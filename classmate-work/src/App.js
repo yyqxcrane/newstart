@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from './components/Head';
-import Login from './components/Login';
+// import Login from './components/Login';
 import Major from './components/Major';
 import Lab from './components/Lab';
 import New from './components/New';
