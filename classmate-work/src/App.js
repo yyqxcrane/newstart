@@ -2,18 +2,17 @@ import React from 'react';
 import Head from './components/Head';
 import Login from './components/Login';
 import Major from './components/Major';
-// import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import Lab from './components/Lab';
+import New from './components/New';
+import Teacher from './components/Teacher';
+import Work from './components/Work';
+import Notice from './components/Notice';
 import './App.css';
-// import List from 'antd/es/list';
-// import 'antd/es/list/style/css';
-// import Typography from 'antd/es/typography';
-// import 'antd/es/typography/style/css';
-
 class App extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
-      // ifShow : 'none',
+      ifShow : 'none',
       homeShow : 'block',
       majorShow : 'none',
       labShow : 'none',
@@ -21,22 +20,110 @@ class App extends React.Component{
       workShow : 'none',
       newShow : 'none',
       noticeShow : 'none',
-      colors : '#1E90FF'
+      num : 1
     }
+  }
+  closeClick(){
+      this.setState({
+          ifShow : 'none'
+      })
+  }
+  registerClick(){
+      this.setState({
+          num : 2
+      })
+  }
+  loginlClick(){
+      this.setState({
+          num : 1
+      })
   }
   loginClick(){
       this.setState({
-        // ifShow : 'block'
+        ifShow : 'block'
       })
   }
   handleClick(e){
-    console.log(e.target);
-    console.log(e.target.id);
-    for(var i=1;i<8;i++){
-      if(e.target.id === i){
-    
-      }
-    }
+    // e.currentTarget.style.color = '#4D4D4D';
+    e.target.style.color = '#1E90FF';
+    // console.log(e.currentTarget.childNodes);
+  }
+  homeClick(){
+    this.setState({
+      homeShow : 'block',
+      majorShow : 'none',
+      labShow : 'none',
+      teaShow : 'none',
+      workShow : 'none',
+      newShow : 'none',
+      noticeShow : 'none'
+    })
+  }
+  majorClick(){
+    this.setState({
+      homeShow : 'none',
+      majorShow : 'block',
+      labShow : 'none',
+      teaShow : 'none',
+      workShow : 'none',
+      newShow : 'none',
+      noticeShow : 'none'
+    })
+  }
+  labClick(){
+    this.setState({
+      homeShow : 'none',
+      majorShow : 'none',
+      labShow : 'block',
+      teaShow : 'none',
+      workShow : 'none',
+      newShow : 'none',
+      noticeShow : 'none'
+    })
+  }
+  teaClick(){
+    this.setState({
+      homeShow : 'none',
+      majorShow : 'none',
+      labShow : 'none',
+      teaShow : 'block',
+      workShow : 'none',
+      newShow : 'none',
+      noticeShow : 'none'
+    })
+  }
+  workClick(){
+    this.setState({
+      homeShow : 'none',
+      majorShow : 'none',
+      labShow : 'none',
+      teaShow : 'none',
+      workShow : 'block',
+      newShow : 'none',
+      noticeShow : 'none'
+    })
+  }
+  newClick(){
+    this.setState({
+      homeShow : 'none',
+      majorShow : 'none',
+      labShow : 'none',
+      teaShow : 'none',
+      workShow : 'none',
+      newShow : 'block',
+      noticeShow : 'none'
+    })
+  }
+  noticeClick(){
+    this.setState({
+      homeShow : 'none',
+      majorShow : 'none',
+      labShow : 'none',
+      teaShow : 'none',
+      workShow : 'none',
+      newShow : 'none',
+      noticeShow : 'block'
+    })
   }
   render(){
     return (
@@ -45,13 +132,13 @@ class App extends React.Component{
             <Head/>
           </div>
           <div className="nav" onClick={this.handleClick.bind(this)}>
-              <span className="home" id="1">首页</span>|
-              <span id="2">专业介绍</span>|
-              <span id="3">实验室</span>|
-              <span id="4">教师队伍</span>|
-              <span id="5">就业指南</span>|
-              <span id="6">新闻</span>|
-              <span id="7">公告</span>
+              <span className="home" id="1" onClick={this.homeClick.bind(this)}>首页</span>|
+              <span id="2" onClick={this.majorClick.bind(this)}>专业介绍</span>|
+              <span id="3" onClick={this.labClick.bind(this)}>实验室</span>|
+              <span id="4" onClick={this.teaClick.bind(this)}>教师队伍</span>|
+              <span id="5" onClick={this.workClick.bind(this)}>就业指南</span>|
+              <span id="6" onClick={this.newClick.bind(this)}>新闻</span>|
+              <span id="7" onClick={this.noticeClick.bind(this)}>公告</span>
           </div>
           <div className="body" style={{display:this.state.homeShow}}>
             <div className="left-top">
@@ -70,9 +157,9 @@ class App extends React.Component{
             </div>
             <div className="left-bottom">
               <h2>新闻</h2>
-              <div>关于开展东北林业大学2019级本科新生问卷调查活动的通知</div>
-              <div>关于查收补发2019年春季学期国家助学金的通知</div>
-              <div>外国语学院招聘启事</div>
+              <div><a href="https://icec.nefu.edu.cn/info/1056/1922.htm">信息学院举办“一流课程双万计划”学术报告</a></div>
+              <div><a href="https://icec.nefu.edu.cn/info/1056/1804.htm">信息与计算机工程学院2020年研究生招生专业目录和考试大纲</a></div>
+              <div><a href="https://icec.nefu.edu.cn/info/1056/1802.htm">信息与计算机工程学院2020年接收推免复试研究生复试与录取工作办法</a></div>
               <div>东北林业大学2019年研究生学业奖学金评定结果公示</div>
             </div>
             <div className="right-bottom">
@@ -89,10 +176,70 @@ class App extends React.Component{
           </div>
 
           <div className="login">
-            <Login />
+            <div>
+                {
+                    this.state.num === 1 ?
+                    <div className="from" style={{display : this.state.ifShow}}>
+                        <div className="head">
+                            <span className="head-left" onClick={this.closeClick.bind(this)}>X</span>
+                            <span className="head-right" onClick={this.registerClick.bind(this)}>注册</span>
+                        </div>
+                        <div className="content">
+                            <div>
+                                <div class="input_box">
+                                    账号: <input id="uname" type="text" name="user" placeholder="请输入用户名"/>
+                                </div>
+                                <div class="input_box">
+                                    密码: <input id="upass" type="password" name="psw" placeholder="请输入密码"/>
+                                </div>
+                                <div class="input_box">
+                                    <button type="button" class="btn btn-primary" onClick={this.closeClick.bind(this)}>登录</button>    
+                                </div>
+                            </div>
+                        </div>
+                    </div> :
+                    <div className="from" style={{display : this.state.ifShow}}>
+                        <div className="head">
+                            <span className="head-left" onClick={this.closeClick.bind(this)}>X</span>
+                            <span className="head-right" onClick={this.loginlClick.bind(this)}>登录</span>
+                        </div>
+                        <div className="content">
+                            <div>
+                                <div class="input_box">
+                                    用户名: <input id="uname" type="text" name="user" placeholder="请输入用户名"/>
+                                </div>
+                                <div class="input_box">
+                                    密码: <input id="upass" type="password" name="psw" placeholder="请输入密码"/>
+                                </div>
+                                <div class="input_box">
+                                    确认密码: <input id="upass" type="password" name="psw" placeholder="请再次输入密码"/>
+                                </div>
+                                <div class="input_box">
+                                    <button type="button" class="btn btn-primary" onClick={this.closeClick.bind(this)}>注册</button>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
           </div>
           <div style={{display : this.state.majorShow}}>
             <Major />
+          </div>
+          <div style={{display : this.state.labShow}}>
+            <Lab />
+          </div>
+          <div style={{display : this.state.newShow}}>
+            <New />
+          </div>
+          <div style={{display : this.state.noticeShow}}>
+            <Notice />
+          </div>
+          <div style={{display : this.state.teaShow}}>
+            <Teacher />
+          </div>
+          <div style={{display : this.state.workShow}}>
+            <Work />
           </div>
         </div>
     )

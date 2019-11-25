@@ -9,16 +9,16 @@ class index extends Component {
             <div>
                 <Carousel autoplay>
                     <div className="head-img">
-                        1<img src="" alt=""/>
+                        <img src="https://www.nefu.edu.cn/images/20190923.jpg" alt=""/>
                     </div>
                     <div className="head-img">
-                        2<img src="" alt=""/>
+                        <img src="https://www.nefu.edu.cn/images/20191004.jpg" alt=""/>
                     </div>
                     <div className="head-img">
-                        3<img src="" alt=""/>
+                        <img src="https://www.nefu.edu.cn/images/20190925.jpg" alt=""/>
                     </div>
                     <div className="head-img">
-                        4<img src="" alt=""/>
+                        <img src="https://www.nefu.edu.cn/images/201909271.jpg" alt=""/>
                     </div>
                 </Carousel>
             </div>
